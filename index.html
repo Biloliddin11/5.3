@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Users</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="card">
+                <img class="user__image" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                    alt="user">
+                <h3 class="user__name">jon doe</h3>
+                <p class="profession">polisman</p>
+                <p class="education">?</p>
+                <button class="contact__btn">Contact</button>
+            </div>  <div class="card">
+                <img class="user__image" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                    alt="user">
+                <h3 class="user__name">jon doe</h3>
+                <p class="profession">polisman</p>
+                <p class="education">?</p>
+                <button class="contact__btn">Contact</button>
+            </div>  <div class="card">
+                <img class="user__image" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                    alt="user">
+                <h3 class="user__name">jon doe</h3>
+                <p class="profession">polisman</p>
+                <p class="education">?</p>
+                <button class="contact__btn">Contact</button>
+            </div>  <div class="card">
+                <img class="user__image" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                    alt="user">
+                <h3 class="user__name">jon doe</h3>
+                <p class="profession">polisman</p>
+                <p class="education">?</p>
+                <button class="contact__btn">Contact</button>
+            </div>
+        </div>
+    </div>
+    <button class="users__btn" onclick="showModal()">Add User</button>
+
+    <div class="container">
+        <div class="modal__wrapper">
+            <p class="modal__title">Formani to'ldiring</p>
+            <form class="form" action="">
+                <p class="info">Ism va Familya:</p>
+                <input class="form__name" type="text" placeholder="Fname and Lname" required>
+                  <p class="info">palor:</p>
+                <input class="password" type="password" placeholder="password" required>
+                <p class="info">Kasbingiz:</p>
+                <input class="form__profession" type="text" placeholder="Your profession" required>
+                <div class="action">
+                    <button class="create__btn">Create</button>
+                    <button class="close__btn" onclick="closeModal()">Exit</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
