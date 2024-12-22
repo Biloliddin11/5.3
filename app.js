@@ -2,7 +2,8 @@ const modalEl = document.querySelector(".modal__wrapper");
 const formEl = document.querySelector(".form");
 const inputName = document.querySelector(".form__name");
 const inputProfession = document.querySelector(".form__profession");
-const password = document.querySelector(".password");
+const inputEducate = document.querySelector(".form__educate");
+const inputImage = document.querySelector(".form__image");
 const contactBtn = document.querySelector(".contact__btn");
 const wrapperEl = document.querySelector(".wrapper");
 
@@ -21,9 +22,10 @@ function createUserCard(user) {
     cardEl.className = "card";
 
     cardEl.innerHTML = `
+        <img class="user__image" src="${`https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg`}" alt="user">
         <h3 class="user__name">${user.name}</h3>
         <p class="profession">${user.profession}</p>
-        <p class="pasword">${user.password}</p>
+        <p class="education">${user.education}</p>
         <button class="contact__btn">Contact</button>
     `;
     wrapperEl.appendChild(cardEl);
@@ -37,7 +39,7 @@ function renderUsers() {
 
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (!inputName.value.trim() || !inputProfession.value.trim() || !password.value.trim()) {
+    if (!inputName.value.trim() || !inputProfession.value.trim() || !inputEducate.value.trim() || !inputImage.value.trim()) {
         return alert("Iltimos, barcha maydonlarni to'ldiring");
     }
 
@@ -45,7 +47,8 @@ formEl.addEventListener("submit", (event) => {
         id: new Date().getTime(),
         name: inputName.value,
         profession: inputProfession.value,
-        password: inputEducate.value,
+        education: inputEducate.value,
+        image: inputImage.value
     };
 
     users.push(newUser);
@@ -54,7 +57,8 @@ formEl.addEventListener("submit", (event) => {
 
     inputName.value = "";
     inputProfession.value = "";
-    password.value = "";
+    inputEducate.value = "";
+    inputImage.value = "";
     closeModal();
 });
 
